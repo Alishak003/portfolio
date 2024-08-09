@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div id="cursor" class="cursor--default"></div> -->
+
+    <div
+      class="nav navbar navbar-expand-lg d-flex justify-content-between px-5 pt-3"
+      role="navigation"
+    >
+      <div id="logo" class="logo">AK</div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="border: none"
+        onclick="buttonIconToggler()"
+      >
+        <span class="bi bi-list text-light" id="hamburger"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="d-flex nav-list font--code mx-auto pe-5 navbar-nav">
+          <li class="nav-item px-5">Work</li>
+          <li class="nav-item px-5">Fun</li>
+          <li class="nav-item px-5">Resume</li>
+        </ul>
+      </div>
+      <div id="theme-icon">
+        <i class="h5 bi bi-moon-fill"></i>
+      </div>
+    </div>
+
+    <!-- body -->
+
+    <div id="wrapper">
+      <!-- Hero Section -->
+
+      <section class="about">
+        <div>
+          <h5 class="code__title mb-4 font--code" id="code__title__upper">
+            #include &ltstdio.h&gt
+          </h5>
+          <!-- <div class="mask" id="mask">
+                <h1 class="about__title">A <span style="color: #000;">UI/UX</span></h1>
+                <h1 class="about__title">Designer</h1>
+              </div> -->
+          <div>
+            <h1 class="about__title">Hi.</h1>
+            <h1 class="about__title">I'm <span>Alisha .</span></h1>
+          </div>
+          <h5 class="code__title font--code mt-5" id="code__title__lower">
+            return 0;
+          </h5>
+          <button class="btn btn-custom px-4 py-2 font--code">
+            Let's talk
+          </button>
+        </div>
+        <div class="fun-section" id="fun-section">
+          <div class="card--canvas shadow" id="card--one">
+            <img src="public/About me card.png" alt="" style="width: 100%" />
+          </div>
+          <div
+            class="card--canvas hover-effect"
+            id="card--two"
+            onclick="cardEvent('card--one')"
+            style="box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.85); scale: 1.2"
+          >
+            <img src="public/FolderImage.png" alt="" style="width: 100%" />
+          </div>
+        </div>
+      </section>
+
+      <!-- section end -->
+
+      <hr id="content-md" />
+      <span id="span-skills">
+        <hr />
+        <ul class="span--list mt-2">
+          <li>UI Design</li>
+          <li>Graphic Content</li>
+          <li>Responsive layout</li>
+          <li>Prototyping</li>
+          <li>Figma</li>
+          <li>Laravel</li>
+        </ul>
+        <hr />
+      </span>
+
+      <!-- second section -->
+
+      <div
+        style="
+          width: 100vw;
+          overflow-x: hidden;
+          margin-top: 5rem;
+          margin-bottom: 5rem;
+        "
+      >
+        <div class="text-center">
+          <h1 class="font--code">&lt Projects & Fun &gt</h1>
+        </div>
+
+        <div
+          class="custom--card bg-dark d-flex col col-12 mx-auto my-5 p-5 align-items-center"
+          id="project-card"
+        >
+          <div class="col col-12 col-lg-5 pe-4">
+            <h1 class="font--code font--xl fw-bold">
+              University Administration Software
+            </h1>
+            <h6 class="font--code fw-bold fs-meta">
+              University of Delhi | Intern <br />
+              Feb 2024 - July 2024
+            </h6>
+            <p>developed a central management software to idk what</p>
+            <img src="public/uni.png" style="width: 100%" alt="" id="unione" />
+          </div>
+          <div class="ms-5 my-2 col-12 col-lg-6 position-relative">
+            <img
+              src="public/Computer.png"
+              style="
+                position: absolute;
+                width: 100%;
+                bottom: -300px;
+                right: -110px;
+              "
+              alt=""
+              id="img-lg"
+            />
+          </div>
+        </div>
+        <div
+          class="custom--card bg-dark d-flex col col-12 mx-auto my-5 p-5 align-items-center"
+        >
+          <div class="col col-12 col-lg-4 pe-4">
+            <h1 class="font--code font--xl fw-bold">Godot Game Project</h1>
+            <h6 class="font--code fw-bold fs-meta">Godot Engine | GDScript</h6>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
+              corrupti modi quibusdam deleniti fugit molestias excepturi
+              sapiente, sunt dolorem magnam at? Quae quod a architecto nobis
+              totam, libero consequatur. Possimus.
+            </p>
+            <img
+              src="public/gogot.png"
+              alt=""
+              style="width: 100%"
+              id="unione"
+            />
+          </div>
+          <div class="ms-5 my-2 col-12 col-lg-7">
+            <img
+              src="public/gogot.png"
+              alt=""
+              style="width: 120%"
+              id="img-lg"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- section end -->
+
+      <!-- line animate
+            -->
+
+      <!-- <div class="hobbies" style="height: 100vh;width: 100vw;position: relative;">
+              <div class="line-container">
+                <svg viewBox="0 0 691 412" fill="none" preserveAspectRatio = "xMidYMax meet">
+                  <path d="M1 1C-2.83333 31.3333 15.1 102.2 117.5 143C245.5 194 272.5 247 266 319C260.8 376.6 223.167 404.333 205 411H187.5C181.833 408.167 171.7 399.7 176.5 388.5C181.3 377.3 197.5 370.5 205 368.5C230.167 366.333 288 358.5 318 344.5C355.5 327 485 291 563.5 184.5C626.3 99.3 674.333 176 690.5 225" stroke="black"/>
+                  </svg>
+                  
+              </div>
+            </div> -->
+
+      <!-- end -->
+
+      <div
+        id="footer"
+        class="footer d-flex align-items-baseline justify-content-around"
+      >
+        <div>
+          <h1 class="text-dark fw-bolder font--xl">Contact Now</h1>
+        </div>
+        <div>
+          <i class="h1 bi-envelope-fill text-dark"></i>
+          <i class="h2 text-dark bi bi-linkedin"></i>
+        </div>
+      </div>
+    </div>
+    <!-- wrapperend -->
+    <script src="modules/main.js"></script>
+    <script src="modules/java.js"></script>
+    <script src="node_modules/gsap/dist/gsap.min.js"></script>
+    <script type="modules" src="node_modules/gsap/ScrollTrigger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- <script>
+      gsap.registerPlugin(ScrollTrigger);
+      console.log("hello");
+      let sections = document.querySelector(".custom--card");
+
+      function getScrollWidth() {
+        console.log("hi");
+        let width = sections.offsetWidth;
+        return -(width - window.innerWidth);
+      }
+
+      const tween = gsap.to(sections, {
+        x: getScrollWidth,
+        duration: 3,
+        ease: "none",
+      });
+
+      ScrollTrigger.create({
+        trigger: "footer",
+        start: "top 0%",
+        end: () => "+=${getScrollWidth() * -1}",
+        pin: true,
+        animation: tween,
+        scrub: 1,
+        invalidateOnRefresh: true,
+        markers: true,
+      });
+    </script> -->
+  </body>
+</html>

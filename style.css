@@ -1,0 +1,316 @@
+body {
+  cursor: default;
+  scroll-behavior: smooth;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* * {
+  cursor: url("public/cursor2.png"), none !important;
+} */
+
+.overflowX-scroll {
+  overflow-x: scroll;
+}
+
+.font--xl {
+  font-size: 3.8em;
+}
+
+.shadow {
+  box-shadow: 5px 5px 7px 2px rgba(0, 0, 0, 1);
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+#content-md {
+  display: none;
+}
+
+/* .mask {
+  font-weight: bold;
+  position: absolute;
+  mask-size: 400px;
+  padding: 20px 10px;
+  color: #000;
+  overflow: hidden;
+}
+
+.mask {
+  -webkit-mask-image: url(Ellipse\ 1.svg);
+  -o-mask-image: url(Ellipse\ 1.svg);
+  -moz-mask-image: url(Ellipse\ 1.svg);
+  -ms-mask-image: url(Ellipse\ 1.svg);
+  mask-image: url(Ellipse\ 1.svg);
+  mask-repeat: no-repeat;
+  background-color: #e6205c;
+} */
+
+/* #cursor {
+  pointer-events: none;
+  z-index: 99999;
+  transition-property: width, height, border-radius, transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  position: absolute;
+  left: -1000px;
+  transform: translate(-50%, -50%);
+}
+
+.cursor--default {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  border: none;
+  background-color: #e9d2d2;
+  opacity: 0.5;
+}
+
+.cursor--text {
+  width: 4px;
+  background-color: #2596be;
+  opacity: 1;
+  border-radius: 0px;
+} */
+
+.nav {
+  border-bottom: 2px solid #544e4e;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #121212;
+}
+
+.logo {
+  font-family: "Fira Code", monospace;
+  font-weight: bold;
+  color: #bc4322;
+}
+
+.about {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5rem;
+  background-image: url("public/Bg.png");
+  background-size: cover;
+}
+
+.about__title {
+  font-size: 9em;
+  line-height: 0.5em;
+  letter-spacing: -2px;
+}
+
+.about__title span {
+  font-weight: 600;
+  color: #e6205c;
+}
+
+.btn-custom {
+  border: 2px solid #fdcc39;
+  background-color: transparent;
+  border-radius: 3px;
+  color: #f0f0f0;
+  margin-top: 4em;
+}
+
+.code__title {
+  color: #757575;
+}
+
+.font--code {
+  font-family: "Fira Code", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #f0f0f0;
+}
+
+hr {
+  margin: 0 20px;
+  border: none;
+  border-bottom: 2px solid #544e4e;
+  opacity: 1;
+}
+
+.span--list {
+  display: flex;
+  font-family: "Fira Code", monospace;
+  justify-content: space-between;
+}
+
+.custom--card {
+  width: 90%;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+  transition-duration: 0.2s;
+}
+
+.custom--card:hover {
+  border: 2px solid #727272;
+  scale: 1.01;
+}
+
+.custom--card--sm {
+  height: 350px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.card--canvas {
+  position: absolute;
+  width: 12.5em;
+  height: 15.6em;
+  transform: rotate(20deg);
+  right: 10%;
+  transition-duration: 0.5s;
+  bottom: 30%;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.card--canvas img {
+  height: 100%;
+}
+
+.hover-effect:hover {
+  transform: rotate(10deg) !important;
+  scale: 1.3 !important;
+}
+
+.footer {
+  background-color: #fff;
+  height: auto;
+  width: 100vw;
+  margin-top: 8em;
+}
+
+/* .line-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+svg {
+  display: inline-block;
+  height: 100%;
+} */
+/* breakups */
+
+#unione {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding: auto;
+    height: 50vh;
+  }
+  .card--canvas {
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+  }
+  .about__title {
+    font-size: 6em;
+  }
+  #span-skills {
+    display: none;
+  }
+
+  #content-md {
+    display: block;
+  }
+
+  .custom--card {
+    height: auto;
+    display: block;
+  }
+
+  .custom--card .col img {
+    display: block;
+  }
+
+  .font--xl {
+    font-size: 2em;
+  }
+
+  #img-lg {
+    display: none;
+  }
+
+  #unione {
+    display: block;
+  }
+}
+
+@media (max-width: 809px) {
+  #fun-section {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    margin-left: 2em;
+    height: 45vh;
+  }
+  .font--xl {
+    font-size: 3rem;
+  }
+
+  .fs-meta {
+    font-size: 0.9em;
+  }
+  .code__title {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 524px) {
+  .about {
+    margin-left: 30px;
+  }
+
+  .about__title {
+    font-size: 4em;
+    line-height: 0.5em;
+    letter-spacing: -2px;
+  }
+
+  .font--xl {
+    font-size: 2em;
+  }
+
+  .fs-meta {
+    font-size: 0.7em;
+  }
+  .btn-custom {
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 390px) {
+  .about__title {
+    font-size: 3em;
+  }
+}
