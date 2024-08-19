@@ -5,6 +5,27 @@ body {
   color: #f0f0f0;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* * {
   cursor: url("public/cursor2.png"), none !important;
 } */
@@ -19,6 +40,30 @@ body {
 
 .shadow {
   box-shadow: 5px 5px 7px 2px rgba(0, 0, 0, 1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 200vh;
+  background-color: #f0f0f0;
+  z-index: 999;
+  border-radius: 0 0 100% 100%;
+}
+
+.counter {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding: 0 0.4em;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .container-fluid {
@@ -81,7 +126,7 @@ body {
   border-bottom: 2px solid #544e4e;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
   background-color: #121212;
 }
 
@@ -114,9 +159,11 @@ body {
 }
 
 .btn-custom {
-  border: 2px solid #fdcc39;
-  background-color: transparent;
-  border-radius: 3px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fdcc39;
   color: #f0f0f0;
   margin-top: 4em;
 }
@@ -163,7 +210,6 @@ hr {
 
 .custom--card:hover {
   border: 2px solid #727272;
-  scale: 1.01;
 }
 
 .custom--card--sm {
@@ -179,8 +225,8 @@ hr {
   height: 15.6em;
   transform: rotate(20deg);
   right: 10%;
+  top: auto;
   transition-duration: 0.5s;
-  bottom: 30%;
   cursor: pointer;
   overflow: hidden;
   border-radius: 15px;
@@ -195,11 +241,29 @@ hr {
   scale: 1.3 !important;
 }
 
+.overlay--card {
+  position: absolute;
+  top: 0;
+  margin-left: 5rem;
+  clip-path: circle(100px at var(--x, 50%) var(--y, 50%));
+}
+
+.is-open {
+  clip-path: circle(200% at 50% 50%);
+  transition: clip-path 1.5s;
+}
+
 .footer {
   background-color: #fff;
-  height: auto;
+  height: 100vh;
   width: 100vw;
   margin-top: 8em;
+}
+.footer a {
+  color: #121212;
+}
+.footer button:hover > a {
+  color: #fff;
 }
 
 /* .line-container {
@@ -215,11 +279,9 @@ svg {
   height: 100%;
 } */
 /* breakups */
-
 #unione {
   display: none;
 }
-
 @media (max-width: 992px) {
   .about {
     padding: auto;
