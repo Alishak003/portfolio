@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Silkscreen:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -22,7 +22,10 @@
   </head>
   <body>
     <!-- <div id="cursor" class="cursor--default"></div> -->
-
+    <div class="counter">
+      <span style="font-family: 'Silkscreen', sans-serif">0</span>%
+    </div>
+    <div class="overlay"></div>
     <div
       class="nav navbar navbar-expand-lg d-flex justify-content-between px-5 pt-3"
       role="navigation"
@@ -43,9 +46,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="d-flex nav-list font--code mx-auto pe-5 navbar-nav">
-          <li class="nav-item px-5">Work</li>
-          <li class="nav-item px-5">Fun</li>
-          <li class="nav-item px-5">Resume</li>
+          <!-- <li class="nav-item px-5">
+            <a
+              href="fun.html"
+              target="_blank"
+              style="text-decoration: none; color: #f0f0f0"
+              >Fun</a
+            >
+          </li> -->
+          <li class="nav-item px-5">
+            <a
+              href="public/alisha Khan resume.pdf"
+              target="_blank"
+              style="text-decoration: none; color: #f0f0f0"
+              >Resume</a
+            >
+          </li>
         </ul>
       </div>
       <div id="theme-icon">
@@ -68,15 +84,12 @@
                 <h1 class="about__title">Designer</h1>
               </div> -->
           <div>
-            <h1 class="about__title">Hi.</h1>
+            <h1 class="about__title">Hi</h1>
             <h1 class="about__title">I'm <span>Alisha .</span></h1>
           </div>
           <h5 class="code__title font--code mt-5" id="code__title__lower">
             return 0;
           </h5>
-          <button class="btn btn-custom px-4 py-2 font--code">
-            Let's talk
-          </button>
         </div>
         <div class="fun-section" id="fun-section">
           <div class="card--canvas shadow" id="card--one">
@@ -118,95 +131,105 @@
           margin-top: 5rem;
           margin-bottom: 5rem;
         "
+        id="work-section"
       >
         <div class="text-center">
-          <h1 class="font--code">&lt Projects & Fun &gt</h1>
+          <h1 class="font--code" id="second-heading">&lt Projects & Fun &gt</h1>
         </div>
 
-        <div
-          class="custom--card bg-dark d-flex col col-12 mx-auto my-5 p-5 align-items-center"
-          id="project-card"
-        >
-          <div class="col col-12 col-lg-5 pe-4">
-            <h1 class="font--code font--xl fw-bold">
-              University Administration Software
-            </h1>
-            <h6 class="font--code fw-bold fs-meta">
-              University of Delhi | Intern <br />
-              Feb 2024 - July 2024
-            </h6>
-            <p>developed a central management software to idk what</p>
-            <img src="public/uni.png" style="width: 100%" alt="" id="unione" />
-          </div>
-          <div class="ms-5 my-2 col-12 col-lg-6 position-relative">
-            <img
-              src="public/Computer.png"
-              style="
-                position: absolute;
-                width: 100%;
-                bottom: -300px;
-                right: -110px;
-              "
-              alt=""
-              id="img-lg"
-            />
+        <div>
+          <div
+            class="custom--card bg-dark d-flex col col-12 mx-auto my-5 p-5 align-items-center"
+            id="unione-card"
+          >
+            <div class="col col-12 col-lg-5 pe-4">
+              <h1 class="font--code font--xl fw-bold">
+                University Administration Software
+              </h1>
+              <h6 class="font--code fw-bold fs-meta">
+                University of Delhi | Intern <br />
+                Feb 2024 - July 2024
+              </h6>
+              <p>
+                Developed a Centralised ERP portal for Administration purposes
+                with an amazing team of coders.
+              </p>
+              <img
+                src="public/uni.png"
+                style="width: 100%"
+                alt=""
+                id="unione"
+              />
+            </div>
+            <div class="ms-5 my-2 col-12 col-lg-6 position-relative">
+              <img
+                src="public/Computer.png"
+                style="
+                  position: absolute;
+                  width: 100%;
+                  bottom: -300px;
+                  right: -110px;
+                "
+                alt=""
+                id="img-lg"
+              />
+            </div>
           </div>
         </div>
-        <div
-          class="custom--card bg-dark d-flex col col-12 mx-auto my-5 p-5 align-items-center"
-        >
-          <div class="col col-12 col-lg-4 pe-4">
-            <h1 class="font--code font--xl fw-bold">Godot Game Project</h1>
-            <h6 class="font--code fw-bold fs-meta">Godot Engine | GDScript</h6>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
-              corrupti modi quibusdam deleniti fugit molestias excepturi
-              sapiente, sunt dolorem magnam at? Quae quod a architecto nobis
-              totam, libero consequatur. Possimus.
-            </p>
-            <img
-              src="public/gogot.png"
-              alt=""
-              style="width: 100%"
-              id="unione"
-            />
-          </div>
-          <div class="ms-5 my-2 col-12 col-lg-7">
-            <img
-              src="public/gogot.png"
-              alt=""
-              style="width: 120%"
-              id="img-lg"
-            />
+        <div>
+          <div
+            class="custom--card bg-dark d-flex col col-12 mx-auto my-5 p-5 align-items-center"
+            id="godot-card"
+          >
+            <div class="col col-12 col-lg-4 pe-4">
+              <h1 class="font--code font--xl fw-bold">Godot Game Project</h1>
+              <h6 class="font--code fw-bold fs-meta">
+                Godot Engine | GDScript
+              </h6>
+              <p>
+                Currently medling with Godot engine to bring my imaginations to
+                life in a 2D Platformer
+              </p>
+              <img
+                src="public/gogot.png"
+                alt=""
+                style="width: 100%"
+                id="unione"
+              />
+            </div>
+            <div class="ms-5 my-2 col-12 col-lg-7">
+              <img
+                src="public/gogot.png"
+                alt=""
+                style="width: 120%"
+                id="img-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
-      <!-- section end -->
-
-      <!-- line animate
-            -->
-
-      <!-- <div class="hobbies" style="height: 100vh;width: 100vw;position: relative;">
-              <div class="line-container">
-                <svg viewBox="0 0 691 412" fill="none" preserveAspectRatio = "xMidYMax meet">
-                  <path d="M1 1C-2.83333 31.3333 15.1 102.2 117.5 143C245.5 194 272.5 247 266 319C260.8 376.6 223.167 404.333 205 411H187.5C181.833 408.167 171.7 399.7 176.5 388.5C181.3 377.3 197.5 370.5 205 368.5C230.167 366.333 288 358.5 318 344.5C355.5 327 485 291 563.5 184.5C626.3 99.3 674.333 176 690.5 225" stroke="black"/>
-                  </svg>
-                  
-              </div>
-            </div> -->
-
-      <!-- end -->
-
+      <!-- end secrion -->
       <div
         id="footer"
-        class="footer d-flex align-items-baseline justify-content-around"
+        class="footer bg-light d-flex align-items-center justify-content-center"
       >
         <div>
-          <h1 class="text-dark fw-bolder font--xl">Contact Now</h1>
-        </div>
-        <div>
-          <i class="h1 bi-envelope-fill text-dark"></i>
-          <i class="h2 text-dark bi bi-linkedin"></i>
+          <h5 class="font--code text-dark mb-1">&lt Contact &gt</h5>
+          <h1 class="text-dark fw-bolder font--xl mb-5">Drop a 'Hi'👋</h1>
+          <button class="btn px-5 mx-3 py-3 rounded-pill btn-outline-primary">
+            <a
+              href="mailto:alishakhanstack@gmail.com?body=hey! Let's work on this website idea that i have ~"
+              style="text-decoration: none"
+            >
+              alishaKhanStack@gmail.com</a
+            >
+          </button>
+          <button class="btn px-5 mx-3 py-3 rounded-pill btn-outline-primary">
+            <a href="tel:+91 8368021796" style="text-decoration: none">
+              +91 8368021796
+            </a>
+          </button>
+          <h5 class="font--code text-dark mt-5">&lt / Contact &gt</h5>
         </div>
       </div>
     </div>
@@ -214,35 +237,71 @@
     <script src="modules/main.js"></script>
     <script src="modules/java.js"></script>
     <script src="node_modules/gsap/dist/gsap.min.js"></script>
-    <script type="modules" src="node_modules/gsap/ScrollTrigger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <!-- <script>
-      gsap.registerPlugin(ScrollTrigger);
-      console.log("hello");
-      let sections = document.querySelector(".custom--card");
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
+    <script>
+      const lenis = new Lenis();
 
-      function getScrollWidth() {
-        console.log("hi");
-        let width = sections.offsetWidth;
-        return -(width - window.innerWidth);
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1200);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+      function startLoader() {
+        let counterElement = document.querySelector(".counter>span");
+        let currentValue = 0;
+
+        function updateLoader() {
+          if (currentValue === 100) {
+            return;
+          }
+
+          currentValue += Math.floor(Math.random() * 10) + 1;
+
+          if (currentValue > 100) {
+            currentValue = 100;
+          }
+
+          counterElement.textContent = currentValue;
+          let delay = Math.floor(Math.random() * 40) + 50;
+          setTimeout(updateLoader, delay);
+        }
+
+        updateLoader();
       }
+      startLoader();
 
-      const tween = gsap.to(sections, {
-        x: getScrollWidth,
-        duration: 3,
-        ease: "none",
+      gsap.to(".counter", 0.3, {
+        delay: 1.7,
+        opacity: 0,
+      });
+      gsap.to(".counter", 0.3, {
+        delay: 2,
+        height: 0,
+      });
+      gsap.to(".overlay", 1, {
+        delay: 2,
+        height: 0,
+      });
+      gsap.from("#wrapper", 2, {
+        delay: 2.1,
+        y: 700,
+        ease: "Power3.Out",
       });
 
-      ScrollTrigger.create({
-        trigger: "footer",
-        start: "top 0%",
-        end: () => "+=${getScrollWidth() * -1}",
-        pin: true,
-        animation: tween,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        markers: true,
+      gsap.from("#footer", {
+        scrollTrigger: "#footer",
+        opacity: 0,
+        duration: 0.5,
       });
-    </script> -->
+    </script>
   </body>
 </html>
